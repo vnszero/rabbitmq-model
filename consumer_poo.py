@@ -23,6 +23,9 @@ class RabbitmqConsumer:
         channel = pika.BlockingConnection(connection_parameters).channel()
         channel.queue_declare(
             queue=self.__queue,
+            # arguments={ # this is necessary if the query has special arguments
+            #     "x-overflow": "reject-publish"
+            # },
             durable=True
         )
         channel.basic_consume(

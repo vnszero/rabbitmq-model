@@ -9,7 +9,7 @@ class RabbitmqPublisher:
         self.__username = "guest"
         self.__password = "guest"
         self.__exchange = "data_exchange"
-        self.__routing_key = ""
+        self.__routing_key = "" # this is useful when a exchange has to fill different queues
         self.__channel = self.__create_channel()
     
     def __create_channel(self):
