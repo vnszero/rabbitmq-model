@@ -8,7 +8,7 @@ class RabbitmqPublisher:
         self.__port = 5672
         self.__username = "guest"
         self.__password = "guest"
-        self.__exchange = "microservice_exchange"
+        self.__exchange = "data_exchange"
         self.__channel = self.__create_channel()
     
     def __create_channel(self):
