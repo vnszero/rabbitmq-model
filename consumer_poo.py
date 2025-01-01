@@ -53,5 +53,5 @@ class RabbitmqConsumer:
 def my_callback(body):
     print("Received message:", body.decode('utf-8'))
 
-rabbitmq_consumer = RabbitmqConsumer("data_queue", my_callback)
+rabbitmq_consumer = RabbitmqConsumer("microservice_queue", my_callback)
 rabbitmq_consumer.start()

@@ -37,4 +37,4 @@ class RabbitmqPublisher:
 
 rabbitmq_publisher = RabbitmqPublisher()
 # the routing key is useful when a exchange has to fill different queues
-rabbitmq_publisher.send_message("", {"Ola": "Mundo"})
+rabbitmq_publisher.send_message("microservice_name", {"Ola": "Mundo"})
